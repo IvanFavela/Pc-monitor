@@ -1,0 +1,348 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+.top-menu {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 98%; 
+    background-color: #333;
+    color: white; 
+    z-index: 1000; 
+    padding: 10px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 25px;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.top-menu {
+    background-color: #1e1e1e;
+    padding: 1px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #00bcd4;
+}
+
+.top-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.top-menu ul li {
+    margin-left: 20px;
+}
+
+.top-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.top-menu ul li a:hover, .top-menu ul li a.active {
+    color: #00bcd4;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+	margin: 0 auto;
+}
+
+.pc {
+    width: 110px;
+    height: 150px;
+    margin: 5px;
+    padding: 1px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: #1e1e1e;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border: 2px solid #333333;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.pc:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+}
+
+.pc::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+.pc.connected::before {
+    background-image: url('../connected.png');
+}
+
+.pc.disconnected::before {
+    background-image: url('../disconnected.png');
+}
+.pc.error-formato {
+	width: 110px;
+    height: 150px;
+    margin: 5px;
+    padding: 1px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: #1e1e1e;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border: 2px solid #333333;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-color: red;
+	color: red;
+}
+.error-formato {
+    border-color: red;
+}
+h2,h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+.grupo-pc {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.grupo-titulo {
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+.grupo-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1px;
+}
+.pc p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.connected {
+    color: #4CAF50;
+}
+.disconnected {
+    color: #F44336;
+}
+.configuracion-container {
+  display: ruby;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.configuracion-container h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.configuracion-form {
+  margin: 20px auto;
+  background-color: #2c2c2c;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.configuracion-form label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.configuracion-form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #3c3c3c;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.configuracion-form textarea {
+  width: 100%;
+  height: 200px;
+  font-size: 16px;
+  background-color: #3c3c3c;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.configuracion-form input[type="submit"] {
+  background-color: #00a0b0;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.configuracion-form input[type="submit"]:hover {
+  background-color: #00a0b0;
+}
+
+.configuracion-message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.configuracion-message.success {
+  color: var(--secondary-color);
+}
+
+.configuracion-message.error {
+  color: var(--error-color);
+}
+.custom-alert {
+	color: red;
+	font-weight: bold;
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	padding: 100px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 50px;
+	z-index: 1000;
+	width: 300px;
+	text-align: center;
+}
+.custom-alert h2 {
+	margin-top: 0;
+	font-size: 18px;
+}
+
+.custom-alert p {
+	color: red;
+	margin: 15px 0;
+	font-weight: bold;
+}
+
+.custom-alert button {
+	background-color: #000000;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.custom-alert button:hover {
+	background-color: #000000;
+}
+
+.alert-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+.toast-notificacion {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #e83b2f;
+    color: #000;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 5%;
+    bottom: 10px;
+    font-size: 17px;
+    opacity: 50%;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.toast-notificacion.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.toast-notificacion.error {
+    background-color: #f44336;
+}
+.clear-button {
+    background-color: #e83b2f;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+    background-color: #d72c1d;
+}
+.fecha-hora {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: bold;
+}
